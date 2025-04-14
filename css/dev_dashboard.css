@@ -1,0 +1,108 @@
+/* user_dashboard.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-bg: #211e33;
+    --secondary-bg: #2a2744;
+    --accent-color: #e67e22;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --success: #2ecc71;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: var(--secondary-bg);
+    padding: 1rem 2rem;
+}
+
+.navbar .logo img {
+    width: 60px;
+}
+
+.container {
+    padding: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.dashboard-box {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-box:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-box h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.dashboard-box p {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.dashboard-box .subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+}
+
+.stat-value {
+    color: var(--text-primary);
+    font-weight: 500;
+}
